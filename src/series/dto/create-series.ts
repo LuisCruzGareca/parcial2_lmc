@@ -8,6 +8,13 @@ export class CreateSerieDTO {
   })
   readonly titulo: string;
 
+  @IsNotEmpty({ message: 'El campo protagonista no debe estar vacío' })
+  @IsString({ message: 'El campo protagonista debe ser de tipo cadena' })
+  @MaxLength(100, {
+    message: 'El campo protagonista no debe tener más de 100 caracteres',
+  })
+  readonly protagonista: string;
+
   @IsNotEmpty({ message: 'El campo sinopsis no debe estar vacío' })
   @IsString({ message: 'El campo sinopsis debe ser de tipo cadena' })
   @MaxLength(5000, {

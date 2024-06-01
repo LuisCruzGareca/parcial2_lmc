@@ -15,6 +15,7 @@ export class SeriesService {
   async insertar(serieDTO: CreateSerieDTO) {
     return await this.serieRepository.save({
       titulo: serieDTO.titulo,
+      protagonista: serieDTO.protagonista,
       sinopsis: serieDTO.sinopsis,
       director: serieDTO.director,
       temporadas: serieDTO.temporadas,
@@ -35,6 +36,7 @@ export class SeriesService {
   async actualizar(id: number, serieDTO: UpdateSerieDTO) {
     return await this.serieRepository.update(id, {
       titulo: serieDTO.titulo,
+      protagonista: serieDTO.protagonista,
       sinopsis: serieDTO.sinopsis,
       director: serieDTO.director,
       temporadas: serieDTO.temporadas,

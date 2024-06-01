@@ -8,6 +8,9 @@ export class Serie {
   @Column('varchar', { length: 250, nullable: false })
   titulo: string;
 
+  @Column('varchar', { length: 252, nullable: false })
+  protagonista: string;
+
   @Column('varchar', { length: 5000, nullable: false })
   sinopsis: string;
 
